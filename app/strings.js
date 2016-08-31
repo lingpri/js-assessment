@@ -3,7 +3,7 @@ exports = typeof window === 'undefined' ? global : window;
 exports.stringsAnswers = {
   reduceString: function(str, amount) {
 
-  	
+
 
   },
 
@@ -13,5 +13,9 @@ exports.stringsAnswers = {
 
   reverseString: function(str) {
 
-  }
+	  let reversedStr = '';
+	  for (let i = str.length - 1; i >= 0; i--)
+	    reversedStr += str[i];
+	  	return reversedStr;
+	  }
 };
