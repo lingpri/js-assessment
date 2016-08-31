@@ -1,8 +1,8 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.asyncAnswers = {
-  async: function(value) {
 
+  async: function(value) {
   	var p = new Promise(function(resolve, reject) {  
 	   if (value) {
 	      resolve(value);  // fulfilled successfully
