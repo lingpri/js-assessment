@@ -9,11 +9,11 @@ exports.arraysAnswers = {
 
   sum: function(arr) {
 
-    var total = arr.reduce(function(a, b) {
+    return arr.reduce(function(a, b) {
             return a + b;
         }, 0);
 
-        return total;
+        
 
   },
 
@@ -109,12 +109,11 @@ exports.arraysAnswers = {
 
   count: function(arr, item) {
 
-     var count = arr.reduce(function(n, val) {
+    return arr.reduce(function(n, val) {
             return n + (val === item);
         }, 0);
 
-        return count;
-
+       
   },
 
   duplicates: function(arr) {

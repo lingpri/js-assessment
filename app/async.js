@@ -3,22 +3,29 @@ exports = typeof window === 'undefined' ? global : window;
 exports.asyncAnswers = {
 
   async: function(value) {
-  	var p = new Promise(function(resolve, reject) {  
-	   if (value) {
-	      resolve(value);  // fulfilled successfully
-	   }
-	   else {
-	      reject(value);  // error, rejected
-	   }
-	});
 
-	return p;
+    return new Promise((resolve, reject) => {
+
+          if (value) {
+            resolve(value);  // fulfilled successfully
+          }
+          else {
+              reject(value);  // error, rejected
+          }
+      
+    });
+
+  
 
   },
 
   manipulateRemoteData: function(url) {
 
-  	return new Promise(function(resolve, reject) {
+    //Ref : To Read
+    //https://gist.github.com/domenic/3889970
+
+    // Return a new promise.
+  	return new Promise((resolve, reject) => {
       
       var request = new XMLHttpRequest();
       request.open('GET', url);
@@ -28,6 +35,10 @@ exports.asyncAnswers = {
         if (request.status === 200) {
         // If successful, resolve the promise by passing back the request response
            var obj = request.response;
+
+           //possibility to chain this in a different service
+           //which returns a promise of sorted people name
+           //
            var people = obj.people.map(function(person) {
            return person.name;
       	 });

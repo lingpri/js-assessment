@@ -3,6 +3,10 @@ exports = typeof window === 'undefined' ? global : window;
 exports.countAnswers = {
   count: function (start, end) {
 
+    
+
+    
+
   	var td;
     function print() {
       console.log(start); 
@@ -19,8 +23,7 @@ exports.countAnswers = {
 
     return {
       cancel: function () {
-      	if(td)
-          clearTimeout(td);
+        td && clearTimeout(td);
       	
       }
     };
