@@ -24,11 +24,6 @@ exports.stringsAnswers = {
 
    var a = str.split("");
 
-   console.log("original array:"+a+"amount:"+amount);
-
-   
-
-
    /*var unique = a.filter(function(item, i, ar){ 
 
    	    console.log("ar.indexOf(item):"+aCount.get(item));
