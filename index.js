@@ -1,5 +1,6 @@
 const fs = require('fs');
 const browserSync = require('browser-sync').create();
+const Combinatorics = require('js-combinatorics');
 
 const port = process.env.PORT || '4444';
 const host = process.env.HOST || '127.0.0.1';

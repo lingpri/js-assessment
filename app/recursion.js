@@ -1,14 +1,19 @@
 exports = typeof window === 'undefined' ? global : window;
 
+
+
 exports.recursionAnswers = {
   listFiles: function(data, dirName) {
 
   },
 
-  permute: function(base) {
+  permute: function(arr) {
+
 
   	// https://en.wikipedia.org/wiki/Heap%27s_algorithm
 
+    cmb = Combinatorics.permutation(arr); // assumes 4
+    return cmb.toArray();
   },
 
   fibonacci: function(n) {
