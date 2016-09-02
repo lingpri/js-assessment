@@ -20,6 +20,8 @@ exports.recursionAnswers = {
       //needed for tracking the subdirectory
       //just so we know that we are 
       //dealing with the children
+      //if its an xml data, the hierarchy is
+      //already established
       dirs.push(dir.dir);
             
       for (let i = 0;i < files.length; i++) {
@@ -60,5 +62,7 @@ exports.recursionAnswers = {
 
   validParentheses: function(n) {
 
+    //incomplete
+    //
   }
 };

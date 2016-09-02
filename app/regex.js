@@ -36,5 +36,7 @@ exports.regexAnswers = {
 
   isUSD: function(str) {
 
+    //incomplete
+
   }
 };

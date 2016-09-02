@@ -2,10 +2,7 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
-   
-         
      return arr.indexOf(item);
-
   },
 
   sum: function(arr) {
@@ -118,7 +115,7 @@ exports.arraysAnswers = {
 
   duplicates: function(arr) {
 
-     var duplicates = arr.reduce(function(acc, el, i, arr) {
+     let duplicates = arr.reduce(function(acc, el, i, arr) {
             //console.log(i);
             //console.log(acc.indexOf(el)); 
             if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;

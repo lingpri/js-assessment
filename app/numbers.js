@@ -3,6 +3,8 @@ exports = typeof window === 'undefined' ? global : window;
 exports.numbersAnswers = {
   valueAtBit: function(num, bit) {
 
+
+
   	//shift the bit to the right most digit and &ing with 1
   	//returns the value at bit
 
@@ -20,7 +22,18 @@ exports.numbersAnswers = {
 
   	//return num .toString(2);
 
-  	let arr = [];
+    let temp = "";
+    let arr = [];
+  	
+
+    /*while(num > 0){
+
+        temp = num%2 + temp;
+        num = num/2;
+
+    }
+
+    return temp;*/
 
   	//its a 8 bit , hence starting with 7
   	//
@@ -39,3 +52,33 @@ exports.numbersAnswers = {
 
   }
 };
+
+
+/**
+Notes to self
+
+Test a Bit is set
+-----------------
+Mask-n == flags & Mask-n - Bit is set
+else Bit is not set
+
+
+
+set a Bit in position n
+-----------------------
+
+flags = flags|Mask3
+
+
+clear a bit 
+----------- 
+flags = flags & ~Mask-n
+
+
+Toggle a bit at position n
+-------------------------
+flags = flags xor Maskn
+
+
+
+*/
