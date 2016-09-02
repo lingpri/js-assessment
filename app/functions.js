@@ -44,12 +44,10 @@ exports.functionsAnswers = {
 
   },
 
-  useArguments: function() {
+  useArguments: function(...args) {
 
 
-    //convert arguments to Array
-    var args = Array.prototype.slice.call(arguments);
-
+      
     //use the reduce function to compute total
     var total = args.reduce(function(a, b) {
             return a + b;
@@ -59,24 +57,16 @@ exports.functionsAnswers = {
 
   },
 
-  callIt: function(fn) {
-
-       
-    //the (index0)first argument is a function
-    //hence slice from index-1 to arguments.length
-    var args = Array.prototype.slice.call(arguments, 1, arguments.length);
-    
-    //call the function with apply method and pass the args array
+  callIt: function(fn,...args) {
+   
     fn.apply(null, args); 
-
     
   },
 
-  partialUsingArguments: function(fn) {
-
-    var args = Array.prototype.slice.call(arguments, 1, arguments.length);
-    return function() {
-      var moreArgs = args.concat(Array.prototype.slice.call(arguments));
+  partialUsingArguments: function(fn,...args) {
+   
+    return function(...args1) {
+      var moreArgs = args.concat(args1);
       return fn.apply(null, moreArgs);
     };
 
@@ -122,7 +112,6 @@ exports.functionsAnswers = {
                 newArgs.push(a);
                 return curried.apply(undefined,newArgs);
              };
-
          }
 
      };

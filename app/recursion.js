@@ -12,7 +12,7 @@ exports.recursionAnswers = {
 
   	// https://en.wikipedia.org/wiki/Heap%27s_algorithm
 
-    cmb = Combinatorics.permutation(arr); // assumes 4
+    cmb = Combinatorics.permutation(arr); 
     return cmb.toArray();
   },
 
