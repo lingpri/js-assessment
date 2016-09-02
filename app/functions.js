@@ -22,11 +22,7 @@ exports.functionsAnswers = {
   },
 
   makeClosures: function(arr, fn) {
-
-    //console.log(arr);
-
-    //console.log(fn);
-
+   
     var ret = [];
 
     var makeFn = function(val) {
@@ -97,7 +93,7 @@ exports.functionsAnswers = {
 
      //idea is to keep returning fucntions
      //until we hit the bottom of the chain
-     //then return the value
+     //and return the value
 
      //this function is attuned to make the test pass
      //we may need to provide a more dynamic solution

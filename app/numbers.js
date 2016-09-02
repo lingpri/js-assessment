@@ -6,7 +6,7 @@ exports.numbersAnswers = {
   	//shift the bit to the right most digit and &ing with 1
   	//returns the value at bit
 
-  	 return (num >> bit-1) & 1
+  	 return (num >> bit-1) & 1;
 
   },
 

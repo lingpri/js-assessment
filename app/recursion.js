@@ -5,9 +5,9 @@ exports.recursionAnswers = {
 
   },
 
-  permute: function(arr) {
+  permute: function(base) {
 
-  	console.log(arr);
+  	// https://en.wikipedia.org/wiki/Heap%27s_algorithm
 
   },
 
