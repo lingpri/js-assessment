@@ -2,7 +2,8 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
-
+   
+         
      return arr.indexOf(item);
 
   },
@@ -12,8 +13,7 @@ exports.arraysAnswers = {
     return arr.reduce(function(a, b) {
             return a + b;
         }, 0);
-
-        
+      
 
   },
 
