@@ -36,9 +36,7 @@ exports.regexAnswers = {
 
   isUSD: function(str) {
 
-    //incomplete
-
-    return(/^\$(([1-9]\d{0,2}(,\d{3})*)|(([1-9]\d*)?\d))(\.\d\d)?$/).test(str);
+     return(/^\$(([1-9]\d{0,2}(,\d{3})*)|(([1-9]\d*)?\d))(\.\d\d)?$/).test(str);
 
   }
 };

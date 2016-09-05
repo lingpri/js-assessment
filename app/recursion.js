@@ -50,6 +50,8 @@ exports.recursionAnswers = {
 
   fibonacci: function(n) {
 
+   // 1, 1, 2, 3, 5, 8
+
   	if (n <= 0) {
       return 0;
     }
@@ -62,7 +64,45 @@ exports.recursionAnswers = {
 
   validParentheses: function(n) {
 
-    //incomplete
-    //
+    //http://stackoverflow.com/questions/3172179/valid-permutation-of-parenthesis
+    //https://blogs.msdn.microsoft.com/ericlippert/2010/04/22/every-tree-there-is/
+
+    //1,1,2,5,14,42
+
+    //catalan  numbers
+
+   // (2n)!/(n+1)!n! = 720/24*6 = 5
+
+   //there should be five different ways that a paranthesis can be generated for n=3
+
+
+
+   var printParen = function (open, close) {
+      var result = [];
+      var temp = [];
+      var i=0;
+      // terminal case
+      if (close === 0) { return ['']; }
+
+      //more left parenthesis left for printing
+      if (open > 0) {
+        temp= printParen(open - 1, close);
+        temp.forEach((el) => result.push('('.concat(el)));
+      }
+      if (close > open) { //more right paren for printing
+        temp = printParen(open, close - 1);
+        temp.forEach((el) => result.push(')'.concat(el)));
+      }
+      //console.log(result);
+      return result;
+    };
+    
+    return printParen(n, n);
   }
+
+   
+
+ 
+
+ 
 };
